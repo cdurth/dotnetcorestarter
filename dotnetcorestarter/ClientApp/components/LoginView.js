@@ -5,6 +5,7 @@ class LoginView extends Component {
     handleSubmit = event => {
         event.preventDefault();
         console.log('submit');
+        console.log(this.props)
         this.props.userLogin(this.username.value, this.password.value);
     }
 

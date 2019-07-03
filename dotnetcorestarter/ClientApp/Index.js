@@ -8,6 +8,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import store from './store';
 import App from './App.js';
+// TODO: this needs updated and refactored to include redux dev tools
 let appStore = createStore(store, applyMiddleware(thunk));
 ReactDOM.render(
     <AppContainer>

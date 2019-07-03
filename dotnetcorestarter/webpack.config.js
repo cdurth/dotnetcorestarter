@@ -4,8 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
 
 module.exports = (env) => {
-    const isDevBuild = !(env && env.prod);
-
+    //const isDevBuild = !(env && env.prod);
+    const isDevBuild = true;
     // Configuration in common to both client-side and server-side bundles
     const sharedConfig = () => ({
         stats: { modules: false },

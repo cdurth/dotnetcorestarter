@@ -1,10 +1,12 @@
 ﻿import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 class TopNav extends Component {
     render() {
+        const { isAuthenticated } = this.props.CurrentUser;
+        console.log('isAuthenticated:', isAuthenticated);
         return (
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
@@ -30,6 +32,13 @@ class TopNav extends Component {
                                 Counter
                             </NavItem>
                         </LinkContainer>
+                        {isAuthenticated && (
+                            <LinkContainer to="/private">
+                                <NavItem eventKey={4}>
+                                    Private API
+                            </NavItem>
+                            </LinkContainer>
+                        )}
                     </Nav>
                     <Nav pullRight>
                         <LinkContainer to="/login">
@@ -39,7 +48,7 @@ class TopNav extends Component {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        )
+        );
     }
 }
 

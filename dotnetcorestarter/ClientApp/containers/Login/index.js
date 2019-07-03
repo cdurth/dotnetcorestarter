@@ -2,8 +2,8 @@
 import LoginView from '../../components/LoginView';
 import { userLogin } from './actions';
 
-const mapDispatchToProps = dispatch => ({
-    userLogin: (username, password) => dispatch(userLogin(username, password))
+const mapDispatchToProps = ({
+    userLogin: userLogin
 });
 
 export default connect(null, mapDispatchToProps)(LoginView);

@@ -1,25 +1,21 @@
-﻿export const userLogin = (username, password) => {
-    return dispatch => {
-        console.log('user: ' + username + ' pass: ' + password);
-        return fetch("/api/Auth/Login", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
-            body: JSON.stringify({ Username: username, Password: password })
-        })
-            .then(resp => resp.json())
-            .then(data => {
-                console.log(data)
-                localStorage.setItem("token", data.jwt)
-                dispatch(loginUser(data.user))
+﻿export const userLogin = (username, password) => dispatch => {
+    console.log('user: ' + username + ' pass: ' + password);
+    return fetch("/api/Auth/Login", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+        },
+        body: JSON.stringify({ Username: username, Password: password })
+    })
+        .then(resp => resp.json())
+        .then(data => {
+            localStorage.setItem("authToken", data);
+            dispatch(loginUser(data));
+        });
+};
 
-            })
-    }
-}
-
-const loginUser = userObj => ({
+const loginUser = jwt => ({
     type: 'LOGIN_USER',
-    payload: userObj
-})
+    payload: jwt
+});

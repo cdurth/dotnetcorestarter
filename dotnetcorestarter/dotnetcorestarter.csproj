@@ -64,4 +64,6 @@
     </ItemGroup>
   </Target>
 
+  <ProjectExtensions><VisualStudio><UserProperties package_1json__JSONSchema="http://json.schemastore.org/prisma" /></VisualStudio></ProjectExtensions>
+
 </Project>

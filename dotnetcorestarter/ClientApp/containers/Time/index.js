@@ -8,9 +8,9 @@ const mapStateToProps = state => ({
     IPAddress: state.timeReducer.IPAddress
 });
 
-const mapDispatchToProps = dispatch => ({
-    fetchServerTime: () => dispatch(fetchServerTime()),
-    fetchIPTime: () => dispatch(fetchIPTime())
+const mapDispatchToProps = ({
+    fetchServerTime: fetchServerTime,
+    fetchIPTime: fetchIPTime
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TimeView);

@@ -12,11 +12,9 @@
             .then(resp => resp.json())
             .then(data => {
                 console.log(data)
-                if (data.message) {
-                } else {
-                    localStorage.setItem("token", data.jwt)
-                    dispatch(loginUser(data.user))
-                }
+                localStorage.setItem("token", data.jwt)
+                dispatch(loginUser(data.user))
+
             })
     }
 }

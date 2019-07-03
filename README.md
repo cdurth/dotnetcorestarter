@@ -1,5 +1,5 @@
 # dotnetcorestarter
-React SPA w/ .NET Core WebAPI
+React & Redux SPA w/ .NET Core WebAPI
 
 ### Installation
 1. Install Visual Studio 2017 and .NET Core deps (2.0.3 min)

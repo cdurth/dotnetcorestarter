@@ -2,7 +2,7 @@
 React & Redux SPA w/ .NET Core WebAPI
 
 ### Installation
-1. Install Visual Studio 2017 and .NET Core deps (2.0.3 min)
+1. Install Visual Studio 2017 and .NET Core deps (2.2 min)
 2. clone repo ``
 3. install npm deps
 4. run via visual studio, database should be created
@@ -22,4 +22,4 @@ React & Redux SPA w/ .NET Core WebAPI
 - [x] TimeTest
 - [ ] User React Views (partial, Login returns proper JWT)
 - [ ] Migrate from MSSQL to Postgres
-- [ ] Beautify it with HTML & CSS :)
+- [ ] Migrate to Bootstrap 4+

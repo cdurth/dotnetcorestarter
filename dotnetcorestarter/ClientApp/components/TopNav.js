@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -18,33 +18,26 @@ class TopNav extends Component {
                 <Navbar.Collapse>
                     <Nav>
                         <LinkContainer exact to="/">
-                            <NavItem eventKey={1}>
-                                Home
-                            </NavItem>
+                            <NavItem>Home</NavItem>
                         </LinkContainer>
+
                         <LinkContainer to="/time">
-                            <NavItem eventKey={2}>
-                                Time
-                            </NavItem>
+                            <NavItem>Time</NavItem>
                         </LinkContainer>
+
                         <LinkContainer to="/counter">
-                            <NavItem eventKey={3}>
-                                Counter
-                            </NavItem>
+                            <NavItem>Counter</NavItem>
                         </LinkContainer>
                         {isAuthenticated && (
                             <LinkContainer to="/private">
-                                <NavItem eventKey={4}>
-                                    Private API
-                            </NavItem>
+                                <NavItem>Private Page</NavItem>
                             </LinkContainer>
                         )}
                     </Nav>
                     <Nav pullRight>
                         <LinkContainer to="/login">
-                            <NavItem eventKey={4} href="#">Login</NavItem>
+                            <NavItem>Login</NavItem>
                         </LinkContainer>
-                        <NavItem eventKey={5} href="#">Signup</NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
